@@ -1,0 +1,18 @@
+﻿Per Vista, W7 in Workgroup:
+Con la UAC abilita (come impostata di default) occorre impostare il sistema
+per l'accesso amministrativo remoto:
+
+Go to key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\system
+Create new Dword value: LocalAccountTokenFilterPolicy
+Set LocalAccountTokenFilterPolicy to "1"
+
+http://support.microsoft.com/kb/942817/en-us
+
+Inotre occorre abilitare le regole del firewall inbound sullo scope Privato:
+- Strumenti gestione Windows (WMI-In) (Servizio RpcSs su TCP 135)
+- Strumenti gestione Windows (DCOM-In) (Servizio Winmgmt su TCP Any)
+
+
+TO DO:
+ToolTips per colonne del ListView
+
